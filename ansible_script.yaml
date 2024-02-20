@@ -1,6 +1,6 @@
 ---
 - name: Install Apache2 
-  hosts: slave1
+  hosts: slave2
   become: true
 
   tasks:
@@ -10,7 +10,7 @@
         state: present
      
 - name: Install  Nginx
-  hosts: slave2
+  hosts: slave3
   become: true
     - name: Install Nginx on the Nginx host
       apt:
