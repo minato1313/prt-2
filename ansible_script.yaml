@@ -9,11 +9,12 @@
         name: apache2
         state: present
      
-- name: Install  Nginx
+- name: Install Nginx
   hosts: slave3
   become: true
+  tasks:
     - name: Install Nginx on the Nginx host
       apt:
         name: nginx
         state: present
-      
+
